@@ -38,11 +38,10 @@ class MainActivity : AppCompatActivity() {
         //create new fragment
         newButton.setOnClickListener {
             numberOfPages++
-
-
             //viewPager.adapter?.notifyDataSetChanged()
-
             viewPager.adapter?.notifyItemInserted(numberOfPages - 1)
+
+            viewPager.currentItem = numberOfPages - 1;
         }
 
     }
